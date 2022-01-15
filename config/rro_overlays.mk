@@ -13,6 +13,14 @@ PRODUCT_PACKAGES += \
     SettingsGoogleOverlayPixel2021 \
     TelephonyProviderOverlay \
     ContactsProviderOverlay \
+<<<<<<< HEAD
+=======
+    CustomPixelLauncherOverlay \
+    FilesOverlay \
+    GoogleConfigOverlay \
+    GooglePermissionControllerOverlay \
+    GoogleWebViewOverlay \
+>>>>>>> 0bf5ee6b... rro_overlays: import themed icons from https://github.com/Evolution-X/vendor_evolution/tree/snow/rro_overlays/CustomPixelLauncherOverlay
     PixelConfigOverlay2018 \
     SettingsProviderOverlay \
     TraceurOverlay \
