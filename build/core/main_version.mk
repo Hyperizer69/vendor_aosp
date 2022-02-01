@@ -2,7 +2,7 @@
 ifeq ($(BUILD_FINGERPRINT),)
 BUILD_NUMBER_CUSTOM := $(shell date -u +%H%M)
 CUSTOM_DEVICE ?= $(TARGET_DEVICE)
-ifneq ($(filter OFFICIAL,$(CUSTOM_BUILD_TYPE)),)
+ifneq ($(filter OFFICIAL,$(PAOS_BUILD_TYPE)),)
 BUILD_SIGNATURE_KEYS := release-keys
 else
 BUILD_SIGNATURE_KEYS := test-keys
@@ -20,8 +20,9 @@ endif
 
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
-    org.pixelair.version=$(CUSTOM_VERSION_PROP) \
-    org.pixelair.version.display=$(CUSTOM_VERSION) \
-    org.pixelair.build_date=$(CUSTOM_BUILD_DATE) \
-    org.pixelair.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelair.build_type=$(CUSTOM_BUILD_TYPE)
+    org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
+    org.pixelexperience.version.display=$(CUSTOM_VERSION) \
+    org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
+    org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
+    org.pixelair.build_type=$(PAOS_BUILD_TYPE)
+    org.pixelair.version=$(BUILD_TYPE)
